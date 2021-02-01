@@ -9,11 +9,11 @@ export default (req, res) => {
       }
       res.end(data.toString());
     });
-  }
-  else {
+  } else {
     fs.writeFile('../../ngrok_url.txt', req.body, function(err) {
-    if (err) {
-        return console.error(err);
-    }
+      if (err) {
+          return console.error(err);
+      }
+    });
   }
 }
